@@ -1,0 +1,288 @@
+body {
+  font-family: 'JosefinSans-Regular';
+  padding-bottom: 250px;
+  margin: 0;
+
+  > h2 {
+    padding-top: 5vw;
+    margin: 0;
+    font-size: 5vw;
+    font-weight: 100;
+    font-family: 'JosefinSans-Regular';
+    text-transform: lowercase;
+  }
+
+  > hr {
+    position: relative;
+    border: 1px solid black;
+    height: 0;
+    margin: 100px 0 0;
+
+    z-index: 9;
+
+    & + h2 {
+      margin: -8vw 0 100px 0;
+
+      span {
+        position: relative;
+        display: inline-block;
+        background-color: white;
+        padding: 0 3vw;
+        z-index: 9;
+      }
+    }
+  }
+}
+
+nav {
+
+  > ul {
+    list-style-type: none;
+    padding: 100px 0 0;
+    margin: 0;
+
+    li {
+      flex: 1;
+      position: relative;
+      padding: 0;
+      margin: 0;
+
+      a {
+        display: block;
+        color: black;
+        padding: 2vw 0;
+        font-size: 3vw;
+        line-height: 1em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: lowercase;
+      }
+    }
+  }
+
+  .menu {
+    height: 0;
+    list-style-type: none;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 7vw;
+    width: 100%;
+    padding: 0;
+    z-index: 9;
+    overflow: hidden;
+
+    li {
+      position: relative;
+      padding: 0;
+      margin: 0;
+
+      a {
+        display: block;
+        color: white;
+        line-height: 1em;
+        padding: 1vw 0;
+        font-size: 1.5vw;
+        text-align: center;
+      }
+
+      &:nth-child(1) a {
+        background-color: #666;
+      }
+      &:nth-child(2) a {
+        background-color: #555;
+      }
+      &:nth-child(3) a {
+        background-color: #444;
+      }
+      &:nth-child(4) a {
+        background-color: #333;
+      }
+      &:nth-child(5) a {
+        background-color: #222;
+      }
+      &:nth-child(6) a {
+        background-color: #111;
+      }
+      &:nth-child(7) a {
+        background-color: #000;
+      }
+    }
+  }
+
+  > ul li:hover .menu,
+  > ul li:focus .menu {
+    height: auto;
+  }
+}
+
+section {
+  overflow: hidden;
+  padding-bottom: 150px;
+}
+
+.hero {
+  position: relative;
+  background-color: #ccc;
+  padding: 200px 0;
+  overflow: hidden;
+
+  h1 {
+    color: white;
+    margin: 0;
+    font-size: 8vw;
+    font-weight: 100;
+
+    text-shadow: 0 5px 10px rgba(0,0,0,0.3);
+
+    small {
+      display: block;
+      font-size: 3vw;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 30vw solid transparent;
+    border-right-color: rgba(255,255,255,0.3);
+    border-top-width: 0;
+  }
+}
+
+.details {
+  background-position: center;
+  background-image: url(../images/cactus-background.webp);
+  background-size: cover;
+
+  background-color: #ddd;
+  padding: 150px 0;
+
+  .row {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  [class^=col] {
+
+    > div {
+      height: 100%;
+      padding: 4vw;
+      margin: 0.1vw 0.1vw 5vh;
+      text-align: center;
+
+      .title {
+        display: block;
+        color: #5b6c1a;
+        font-size: 3vw;
+        text-align: center;
+        text-transform: lowercase;
+        margin-bottom: 1vw;
+        font-family: 'SweetPea';
+
+        &.sub {
+          color: black;
+          font-family: 'JosefinSans-Regular';
+          text-transform: uppercase;
+          font-size: 1.5vw;
+        }
+      }
+    }
+  }
+}
+
+.work {
+
+}
+
+.work,
+.photos {
+  img.responsive {
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+h2#photos {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -5vw;
+    width: 0;
+    height: 0;
+    border: 30vw solid transparent;
+    border-right-color: #ddd;
+    border-top-width: 0;
+
+    z-index: 1;
+  }
+}
+
+.photos {
+  img {
+    position: relative;
+    z-index: 2;
+  }
+
+  button {
+    display: block;
+    background: white;
+    line-height: 2em;
+    padding: 0 50px;
+    border: 2px solid black;
+    margin: 100px auto 0;
+    text-align: middle;
+    font-size: 5vw;
+    font-weight: 100;
+    font-family: 'JosefinSans-Regular';
+    text-transform: uppercase;
+
+    outline: none;
+  }
+}
+
+.about {
+  p {
+    color: #6D7D27;
+    line-height: 1.75em;
+    font-size: 3vw;
+
+    &:first-child {
+      font-size: 5vw;
+      font-weight: 100;
+    }
+  }
+
+  img {
+    margin-top: 15vw;
+  }
+}
+
+.more {
+  height: 0;
+  padding-top: 50px;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+
+img.responsive {
+  max-width: 100%;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
