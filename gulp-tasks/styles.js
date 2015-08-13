@@ -14,10 +14,19 @@ gulp.task('styles', function () {
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
+    .on('error', function ( error ) {
+      console.log( error );
+    })
     .pipe( $.postcss([
       require('autoprefixer-core')({ browsers: browserlist })
     ]))
+    .on('error', function ( error ) {
+      console.log( error );
+    })
     .pipe( $.sourcemaps.write() )
+    .on('error', function ( error ) {
+      console.log( error );
+    })
     .pipe( gulp.dest('./build/styles') )
     .pipe( browserSync.reload({ stream: true }) )
   ;
@@ -33,9 +42,15 @@ gulp.task('styles-build', function () {
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
+    .on('error', function ( error ) {
+      console.log( error );
+    })
     .pipe( $.postcss([
       require('autoprefixer-core')({ browsers: browserlist })
     ]))
+    .on('error', function ( error ) {
+      console.log( error );
+    })
     .pipe( gulp.dest('./build/styles') )
     .pipe( browserSync.reload({ stream: true }) )
   ;

@@ -6,3 +6,37 @@
   font-family: 'SweetPea';
   src: url('../fonts/SweetPea.ttf') format('truetype');
 }
+
+@media only screen and (min-width : $screen_cs ) {
+  html {
+  	font-size: 14px
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : $screen_xs ) {
+  html {
+	font-size: 14px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : $screen_sm ) {
+  html {
+	font-size: 14px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : $screen_md ) {
+  html {
+	font-size: 16px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : $screen_lg ) {
+  html {
+	font-size: 18px
+  }
+}

@@ -3,19 +3,25 @@ var runSequence = require('run-sequence');
 
 gulp.task('default', function () {
   runSequence(
-    // 'clean',
+    [
+      'clean',
+    ],
     [
       'html',
       'data',
+      'fonts',
       'styles',
       'scripts'
     ],
+    [
+      'images-min'
+    ],
     // [
-    //   "images-webp"
+    //   'images-webp'
     // ],
-    // [
-    //   "images-resize"
-    // ],
+    [
+      'images-resize'
+    ],
     'serve',
     'watch'
   );
